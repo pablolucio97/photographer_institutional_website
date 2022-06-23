@@ -1,11 +1,11 @@
 const theme = {
   colors: {
-    primary: "#0076E3",
-    primary_light: "#51cbff",
-    primary_dark: "#01377d",
-    secondary: "#FFDD00",
-    secondary_light: "#ffee70",
-    secondary_dark: "#7d6f01",
+    primary: "#00FFF0",
+    primary_light: "#92FFF8",
+    primary_dark: "#00E1D4",
+    secondary: "#595959",
+    secondary_light: "#DFDCDC",
+    secondary_dark: "#000000",
     tertiary: "#00ff77",
     tertiary_light: "#99e8a6",
     tertiary_dark: "#017d47",
@@ -34,8 +34,8 @@ const theme = {
     black500: "#1f1f1f",
   },
   fonts: {
-    default: "Poppins",
-    secondary: "Montserrat",
+    default: "Inter",
+    secondary: "Open Sans",
   },
   sizes: {
     xxsmall: ".64rem",

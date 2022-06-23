@@ -32,6 +32,14 @@ export const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
     }
+
+    h1, h2, h3, h4, h5, h6{
+      font-family: ${(props) => props.theme.fonts.default};
+    }
+
+    span, p{
+      font-family: ${(props) => props.theme.fonts.secondary};
+    }
     
     .active-modal {
         display: flex;
