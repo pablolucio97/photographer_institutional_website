@@ -85,22 +85,23 @@ export default function Layout({ children }: LayoutProps) {
                         toggleDrawer={handleToggleDrawer}
                         direction='top'
                         style={{
-                            backgroundColor: theme.colors.black100
+                            backgroundColor: theme.colors.black100,
+                            minHeight: '24vh'
                         }}
                     >
                         <HeaderLink
-                            content='Sobre o treinamento'
-                            url='/#metrics'
+                            content='Home'
+                            url='/'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='O que dizem sobre o treinamento'
-                            url='/#testimonials'
+                            content='Portfólio'
+                            url='/'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='Quero queimar gordura'
-                            url='/#purchase'
+                            content='Contato'
+                            url='/'
                             onClick={handleToggleDrawer}
                         />
                     </Drawer>
@@ -108,32 +109,21 @@ export default function Layout({ children }: LayoutProps) {
                 <DrawerButton
                     toggleDrawer={handleToggleDrawer}
                 />
-                <HeaderLogoContainer>
-                    <Logo
-                        imageUrl='/logo.png'
-                        size={headerAnimation ? 'small' : 'medium'}
-                    />
-                </HeaderLogoContainer>
+    
                 <HeaderLinksContainer>
                     <HeaderLink
-                        content='Sobre nós'
+                        content='Home'
                         url='/'
                     />
                     <HeaderLink
-                        content='Sobre o treinamento'
+                        content='Portfólio'
+                        url='/'
+                    />
+                    <HeaderLink
+                        content='Contato'
                         url='/'
                     />
                 </HeaderLinksContainer>
-                <HeaderAuthenticationContainer>
-                    <PrimaryButton
-                        title='Quero queimar gordura'
-                        size='large'
-                        onClick={() => { }}
-                        style={{
-                            backgroundColor: theme.colors.primary
-                        }}
-                    />
-                </HeaderAuthenticationContainer>
             </Header>
             <main>{children}</main>
             <Footer
@@ -143,15 +133,19 @@ export default function Layout({ children }: LayoutProps) {
             >
                 <FooterFirstSection>
                     <FooterTitle
-                        content='O treinamento'
+                        content='Acesso rápido'
                     />
                     <FooterLink
-                        content='Sobre o treinamento'
-                        url='/#metrics'
+                        content='Portfólio'
+                        url='/'
                     />
                     <FooterLink
-                        content='O que dizem sobre o treinamento'
-                        url='/#testimonials'
+                        content='Experiência'
+                        url='/'
+                    />
+                    <FooterLink
+                        content='O que dizem'
+                        url='/'
                     />
                 </FooterFirstSection>
                 <FooterSecondSection>
