@@ -101,8 +101,9 @@ export const GlobalStyle = createGlobalStyle`
 
   .headerScrolling {
     position: fixed;
-    height: 40px;
-    background-color: ${({ theme }) => theme.colors.primary};
+    height: 64px;
+    background-color: ${({ theme }) => theme.colors.black100};
+    z-index: 999;
   }
 
   .headerNotScrolling {
@@ -112,6 +113,8 @@ export const GlobalStyle = createGlobalStyle`
   .animatedTopScroll {
     right: 24px;
     transition: all 0.3s ease;
+    background: ${(props) => props.theme.colors.primary_dark};
+    color: ${(props) => props.theme.colors.black300};
   }
   .normalTopScroll {
     right: -80px;
@@ -129,6 +132,13 @@ export const GlobalStyle = createGlobalStyle`
     @media(max-width: 720px){
       font-size: ${({ theme }) => theme.sizes.huge};
     }
+  }
+
+  .glassEffect {
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.54);
+    transition: all 1s ease;
   }
 
 `;

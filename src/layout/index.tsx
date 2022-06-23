@@ -78,7 +78,7 @@ export default function Layout({ children }: LayoutProps) {
                 elementReferenceId='top'
             />
             <Header
-                className={headerAnimation ? 'headerScrolling' : 'headerNotScrolling'}
+                className={headerAnimation ? 'headerScrolling glassEffect' : 'headerNotScrolling'}
             >
                 {toggleDrawer &&
                     <Drawer
