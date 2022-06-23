@@ -73,6 +73,59 @@ export const IntroductionSectionImageContainer = styled.div`
 
 export const MetricsSection = styled.section`
   display: flex;
+  width: 100%;
+  min-height: 64vh;
+background: -webkit-linear-gradient(180deg, rgb(18, 18, 18), rgb(28, 28, 28));
+background: linear-gradient(180deg, rgb(18, 18, 18), rgb(28, 28, 28));
+`;
+
+export const MetricsSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1900px;
+  margin: 0 auto;
+  padding: 80px 40px;
+
+  & h1 {
+    color: ${({ theme }) => theme.colors.white100};
+    font-weight: 800;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+  }
+`;
+
+export const CountUpGroupContainer = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+`;
+export const CountUpContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 320px;
+  margin: 0 auto;
+  padding: 12px;
+
+  & h3 {
+    color: ${({ theme }) => theme.colors.white100};
+    font-weight: 500;
+    margin: 24px auto;
+    text-align: center;
+  }
+  @media (max-width: 720px) {
+    height: 240px;
+  }
 `;
 
 export const TestimonialsSection = styled.section`
@@ -84,10 +137,6 @@ export const FaqSection = styled.section`
 `;
 
 export const PurchaseSection = styled.section`
-  display: flex;
-`;
-
-export const MetricsSectionContainer = styled.div`
   display: flex;
 `;
 

@@ -118,4 +118,17 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.3s ease;
   }
 
+  .countUp{
+    font-size: ${({ theme }) => theme.sizes.xxhuge};
+    font-weight: 800;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.primary};
+    @media(max-width: 1080px){
+      font-size: ${({ theme }) => theme.sizes.xhuge};
+    }
+    @media(max-width: 720px){
+      font-size: ${({ theme }) => theme.sizes.huge};
+    }
+  }
+
 `;

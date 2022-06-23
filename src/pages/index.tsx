@@ -1,9 +1,16 @@
 import type { NextPage } from 'next'
+import dynamic from 'next/dynamic'
+
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer } from '../styles'
+import { BannerSection, BannerSectionContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MetricsSection, MetricsSectionContainer } from '../styles'
 import { NextImage } from '../components/Next/NextImage'
 import { RevealFade } from '../components/Animations/RevealFade'
+import { SubTitle } from '../components/Typography/SubTitle'
+
+
+const CountUp = dynamic(() => import('react-countup'), { ssr: false })
+
 
 const Home: NextPage = () => {
 
@@ -13,7 +20,7 @@ const Home: NextPage = () => {
         <BannerSectionContainer>
         </BannerSectionContainer>
       </BannerSection>
-      <IntroductionSection>
+      <IntroductionSection id='sobremim'>
         <IntroductionSectionContainer>
           <IntroductionSectionContentContainer>
             <Title
@@ -42,7 +49,55 @@ const Home: NextPage = () => {
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
-    </Container>
+      <MetricsSection>
+        <MetricsSectionContainer>
+          <RevealFade>
+            <Title
+              content='Qual é a minha experiência?'
+            />
+          </RevealFade>
+          <CountUpGroupContainer>
+            <CountUpContainer>
+              <CountUp
+                end={90}
+                prefix='+ de '
+                decimal='.'
+                decimals={3}
+                className='countUp'
+              />
+              <SubTitle
+                content='Fotografias tiradas'
+              />
+            </CountUpContainer>
+            <CountUpContainer>
+              <CountUp
+                prefix='+ de '
+                end={700}
+                className='countUp'
+              />
+              <SubTitle
+                content='Albúns entregues'
+              />
+            </CountUpContainer>
+
+            <CountUpContainer>
+              <CountUp
+                prefix='+ de '
+                start={1.02}
+                end={1.2}
+                decimal='.'
+                decimals={3}
+                className='countUp'
+              />
+              <SubTitle
+                content='Clientes satisfeitos'
+              />
+            </CountUpContainer>
+
+          </CountUpGroupContainer>
+        </MetricsSectionContainer>
+      </MetricsSection>
+    </Container >
   )
 }
 
