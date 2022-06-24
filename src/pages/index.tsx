@@ -3,10 +3,12 @@ import dynamic from 'next/dynamic'
 
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MetricsSection, MetricsSectionContainer } from '../styles'
+import { BannerSection, BannerSectionContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MetricsSection, MetricsSectionContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
 import { NextImage } from '../components/Next/NextImage'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { SubTitle } from '../components/Typography/SubTitle'
+import { TestimonialCard } from '../components/Cards/TestimonialCard'
+import { testimonials } from '../data/data'
 
 
 const CountUp = dynamic(() => import('react-countup'), { ssr: false })
@@ -49,7 +51,7 @@ const Home: NextPage = () => {
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
-      <MetricsSection>
+      <MetricsSection id='experiencia'>
         <MetricsSectionContainer>
           <RevealFade>
             <Title
@@ -97,6 +99,24 @@ const Home: NextPage = () => {
           </CountUpGroupContainer>
         </MetricsSectionContainer>
       </MetricsSection>
+      <TestimonialsSection id='oquedizem'>
+        <TestimonialsSectionContainer>
+          <Title
+            content='O que meus clientes dizem'
+          />
+          <TestimonialsCardsContainer>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                personName={testimonial.name}
+                personPhotoUrl={testimonial.url}
+                testimonial={testimonial.testimonial}
+                cardClassName='testimonialCard'
+              />
+            ))}
+          </TestimonialsCardsContainer>
+        </TestimonialsSectionContainer>
+      </TestimonialsSection>
     </Container >
   )
 }

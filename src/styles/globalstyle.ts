@@ -141,4 +141,15 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 1s ease;
   }
 
+  .testimonialCard{
+    width: 320px;
+    height: 400px;
+    @media (max-width: 1080px) {
+    width: 56%;
+  }
+    @media (max-width: 720px) {
+    width: 96%;
+  }
+  }
+
 `;
