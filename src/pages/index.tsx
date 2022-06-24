@@ -8,7 +8,8 @@ import { NextImage } from '../components/Next/NextImage'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
-import { testimonials } from '../data/data'
+import { allPhotos, birthdaysPhotoUrls, testimonials } from '../data/data'
+import { ImageSlider } from '../components/Elements/ImageSlider'
 
 
 const CountUp = dynamic(() => import('react-countup'), { ssr: false })
@@ -19,8 +20,15 @@ const Home: NextPage = () => {
   return (
     <Container>
       <BannerSection id='home'>
-        <BannerSectionContainer>
-        </BannerSectionContainer>
+        <ImageSlider
+          images={allPhotos}
+          imgWidth={1920}
+          imgHeight={940}
+          infiniteLoop
+          autoPlay
+          showStatus={false}
+          showIndicators={false}
+        />
       </BannerSection>
       <IntroductionSection id='sobremim'>
         <IntroductionSectionContainer>
@@ -43,7 +51,7 @@ const Home: NextPage = () => {
           <IntroductionSectionImageContainer>
             <RevealFade>
               <NextImage
-                imgUrl='/images/photographer2.jpg'
+                imgUrl='/images/photographer1.jpg'
                 width={644}
                 height={437}
               />

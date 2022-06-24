@@ -46,10 +46,9 @@ export const GlobalStyle = createGlobalStyle`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 320px;
-        height: 240px;
-        padding: 1rem;
-        background: ${(props) => props.theme.colors.element_base};
+        width: 80%;
+        height: 80%;;
+        background: ${(props) => props.theme.colors.black100};
         border-radius: 4px;
         margin: 25% auto;
         h3{
@@ -58,6 +57,7 @@ export const GlobalStyle = createGlobalStyle`
         }
         @media(max-width: 720px){
             width: 92%;
+            height: 30%;;
         }
   }
 
@@ -70,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .react-modal-overlay{
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.88);
         position: fixed;
         top: 0;
         bottom: 0;

@@ -4,16 +4,17 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: ${({ theme }) => theme.colors.black100};
 `;
 
 export const BannerSection = styled.section`
   display: flex;
   width: 100%;
-  min-height: 40vh;
 `;
 
 export const BannerSectionContainer = styled.div`
   width: 1440px;
+  height: 100%;
   margin: 0 auto;
   background-image: url("/images/photographer1.jpg");
   background-repeat: no-repeat;
@@ -25,6 +26,7 @@ export const IntroductionSection = styled.section`
   width: 100%;
   min-height: 80vh;
   background-color: ${({ theme }) => theme.colors.white100};
+  margin-top: -40px;
 `;
 
 export const IntroductionSectionContainer = styled.div`

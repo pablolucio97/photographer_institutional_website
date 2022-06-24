@@ -90,6 +90,7 @@ export default function Layout({ children }: LayoutProps) {
                             backgroundColor: theme.colors.black100,
                             minHeight: '24vh'
                         }}
+                        className='glassEffect'
                     >
                         <HeaderLink
                             content='Home'
@@ -111,7 +112,7 @@ export default function Layout({ children }: LayoutProps) {
                 <DrawerButton
                     toggleDrawer={handleToggleDrawer}
                 />
-    
+
                 <HeaderLinksContainer>
                     <HeaderLink
                         content='Home'

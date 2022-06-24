@@ -71,3 +71,23 @@ export const portfolioPhotos = [
 
 export const googleMapAddress =
   "https://maps.google.com/maps?q=joao%20monlevade&t=&z=13&ie=UTF8&iwloc=&output=embed";
+
+export const eventsPhotoUrls = [
+  "/images/event1.jpg",
+  "/images/event2.jpg",
+  "/images/event3.jpg",
+];
+
+export const weddingsPhotoUrls = [
+  "/images/wedding1.jpg",
+  "/images/wedding2.jpg",
+  "/images/wedding3.jpg",
+];
+
+export const birthdaysPhotoUrls = [
+  "/images/birthday1.jpg",
+  "/images/birthday2.jpg",
+  "/images/birthday3.jpg",
+];
+
+export const allPhotos = [...eventsPhotoUrls, ...birthdaysPhotoUrls, ...weddingsPhotoUrls]
