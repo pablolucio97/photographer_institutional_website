@@ -68,3 +68,6 @@ export const portfolioPhotos = [
     ],
   },
 ];
+
+export const googleMapAddress =
+  "https://maps.google.com/maps?q=joao%20monlevade&t=&z=13&ie=UTF8&iwloc=&output=embed";

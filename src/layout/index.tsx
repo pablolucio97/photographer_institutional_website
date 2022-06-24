@@ -103,7 +103,7 @@ export default function Layout({ children }: LayoutProps) {
                         />
                         <HeaderLink
                             content='Contato'
-                            url='/'
+                            url='/contato'
                             onClick={handleToggleDrawer}
                         />
                     </Drawer>
@@ -123,7 +123,7 @@ export default function Layout({ children }: LayoutProps) {
                     />
                     <HeaderLink
                         content='Contato'
-                        url='/'
+                        url='/contato'
                     />
                 </HeaderLinksContainer>
             </Header>

@@ -157,5 +157,11 @@ export const GlobalStyle = createGlobalStyle`
     height: 32px;
     color: ${(props) => props.theme.colors.primary_dark};
   }
+  .socialContactIcons{
+    width: 24px;
+    height: 24px;
+    color: ${(props) => props.theme.colors.primary_dark};
+    margin-right: 8px;
+  }
 
 `;

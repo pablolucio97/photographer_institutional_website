@@ -24,6 +24,8 @@ import { NextImage } from '../components/Next/NextImage'
 import { NextPage } from 'next'
 import { FaBirthdayCake } from 'react-icons/fa'
 import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
+import { RevealFade } from '../components/Animations/RevealFade'
+import { SubTitle } from '../components/Typography/SubTitle'
 
 const eventPhotos = portfolioPhotos.map(photo => photo.events.map(event => event.url))
 const weddingPhotos = portfolioPhotos.map(photo => photo.weddings.map(wedding => wedding.url))
@@ -43,18 +45,20 @@ const Home: NextPage = () => {
             <BsCalendar2Event
               className='portfolioIcons'
             />
-            <Title
+            <SubTitle
               content='Eventos e reuniões'
             />
             <PortfolioEventsImagesContainer>
               {eventPhotos.map(photo => (
                 photo.map(item => (
                   <ImageContainer key={item}>
-                    <NextImage
-                      imgUrl={item}
-                      height={240}
-                      width={320}
-                    />
+                  <RevealFade>
+                      <NextImage
+                        imgUrl={item}
+                        height={240}
+                        width={320}
+                      />
+                    </RevealFade>
                   </ImageContainer>
                 ))
               ))}
@@ -64,18 +68,20 @@ const Home: NextPage = () => {
             <BsFlower1
               className='portfolioIcons'
             />
-            <Title
+            <SubTitle
               content='Casamentos'
             />
             <PortfolioWeddingsImagesContainer>
               {weddingPhotos.map(photo => (
                 photo.map(item => (
                   <ImageContainer key={item}>
-                    <NextImage
-                      imgUrl={item}
-                      height={240}
-                      width={320}
-                    />
+                   <RevealFade>
+                      <NextImage
+                        imgUrl={item}
+                        height={240}
+                        width={320}
+                      />
+                    </RevealFade>
                   </ImageContainer>
                 ))
               ))}
@@ -85,18 +91,20 @@ const Home: NextPage = () => {
             <FaBirthdayCake
               className='portfolioIcons'
             />
-            <Title
+            <SubTitle
               content='Aniversários'
             />
             <PortfolioBirthdaysImagesContainer>
               {birthdayPhotos.map(photo => (
                 photo.map(item => (
                   <ImageContainer key={item}>
-                    <NextImage
-                      imgUrl={item}
-                      height={240}
-                      width={320}
-                    />
+                    <RevealFade>
+                      <NextImage
+                        imgUrl={item}
+                        height={240}
+                        width={320}
+                      />
+                    </RevealFade>
                   </ImageContainer>
                 ))
               ))}

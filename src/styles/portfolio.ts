@@ -34,10 +34,12 @@ export const PortfolioEventsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  min-height: 56vh;
+  min-height: 40vh;
+  margin: 40px auto 0;
 
-  & h1{
+  & h3{
     margin: 0 auto;
+    color: ${({ theme }) => theme.colors.black300};
   }
 
 `;
@@ -48,10 +50,12 @@ export const PortfolioWeddingsContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 56vh;
+  min-height: 40vh;
+  margin: 40px auto 0;
 
-  & h1{
+  & h3{
     margin: 0 auto;
+    color: ${({ theme }) => theme.colors.black300};
   }
 
 `;
@@ -62,10 +66,12 @@ export const PortfolioBirthdaysContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 56vh;
+  min-height: 40vh;
+  margin: 40px auto 0;
 
-  & h1{
+  & h3{
     margin: 0 auto;
+    color: ${({ theme }) => theme.colors.black300};
   }
 
 `;
