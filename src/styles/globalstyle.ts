@@ -152,4 +152,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   }
 
+  .portfolioIcons{
+    width: 32px;
+    height: 32px;
+    color: ${(props) => props.theme.colors.primary_dark};
+  }
+
 `;

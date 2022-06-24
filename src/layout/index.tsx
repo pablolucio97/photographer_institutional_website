@@ -19,6 +19,7 @@ import { Logo } from '../components/Elements/Logo';
 import { PrimaryButton } from '../components/Elements/PrimaryButton';
 import { SocialIcons } from '../components/Elements/SocialIcons';
 import { TopScrollButton } from '../components/Elements/TopScrollButton';
+import NextProgress from '../components/Next/NextProgress';
 import { Text } from '../components/Typography/Text';
 import { Container } from './styles';
 
@@ -72,6 +73,7 @@ export default function Layout({ children }: LayoutProps) {
 
     return (
         <Container id='top'>
+            <NextProgress />
             <TopScrollButton
                 className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
                 icon={<MdArrowUpward />}
@@ -96,7 +98,7 @@ export default function Layout({ children }: LayoutProps) {
                         />
                         <HeaderLink
                             content='Portfólio'
-                            url='/'
+                            url='/portfolio'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
@@ -117,7 +119,7 @@ export default function Layout({ children }: LayoutProps) {
                     />
                     <HeaderLink
                         content='Portfólio'
-                        url='/'
+                        url='/portfolio'
                     />
                     <HeaderLink
                         content='Contato'
@@ -137,7 +139,7 @@ export default function Layout({ children }: LayoutProps) {
                     />
                     <FooterLink
                         content='Portfólio'
-                        url='/'
+                        url='/portfolio'
                     />
                     <FooterLink
                         content='Experiência'
