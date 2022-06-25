@@ -84,11 +84,13 @@ const Home: NextPage = () => {
           <CountUpGroupContainer>
             <CountUpContainer>
               <CountUp
-                end={90}
+                start={5}
+                end={9}
                 prefix='+ de '
                 decimal='.'
                 decimals={3}
                 className='countUp'
+                duration={3}
               />
               <SubTitle
                 content='Fotografias tiradas'
@@ -99,6 +101,7 @@ const Home: NextPage = () => {
                 prefix='+ de '
                 end={700}
                 className='countUp'
+                 duration={4}
               />
               <SubTitle
                 content='Albúns entregues'
@@ -113,6 +116,7 @@ const Home: NextPage = () => {
                 decimal='.'
                 decimals={3}
                 className='countUp'
+                 duration={6}
               />
               <SubTitle
                 content='Clientes satisfeitos'

@@ -4,7 +4,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
 
+export const PortfolioSection = styled.section`
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  background-color: ${({ theme }) => theme.colors.white100};
+
+  
   & .modalImage{
   width: 92%;
   height: 64%;
@@ -26,13 +34,6 @@ export const Container = styled.div`
 }
 }
 
-`;
-
-export const PortfolioSection = styled.section`
-  display: flex;
-  width: 100%;
-  min-height: 80vh;
-  background-color: ${({ theme }) => theme.colors.white100};
 `;
 
 export const PortfolioSectionContainer = styled.div`
