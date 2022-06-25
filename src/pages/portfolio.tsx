@@ -1,5 +1,6 @@
 
 import { Title } from '../components/Typography/Title'
+import Image from 'next/image'
 import {
 
   Container,
@@ -27,7 +28,7 @@ import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { ModalBox } from '../components/Modals/ModalBox'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ImageSlider } from '../components/Elements/ImageSlider'
 
 
@@ -37,13 +38,18 @@ const birthdayPhotos = portfolioPhotos.map(photo => photo.birthdays.map(birthday
 
 const Home: NextPage = () => {
 
+  console.log(eventPhotos)
+
   const [modal, setModal] = useState(false)
+  const [currentImage, setCurrentImage] = useState('')
 
   function handleToggleModal() {
     setModal(!modal)
   }
 
-  console.log(eventPhotos[0])
+  function renderImage(path: string) {
+    return <img src={path} width='100%' height='auto' />
+  }
 
   return (
     <Container>
@@ -64,7 +70,10 @@ const Home: NextPage = () => {
               {eventPhotos.map(photo => (
                 photo.map(item => (
                   <ImageContainer key={item}
-                    onClick={handleToggleModal}
+                    onClick={() => {
+                      handleToggleModal(),
+                        setCurrentImage(item)
+                    }}
                   >
                     <RevealFade>
                       <NextImage
@@ -73,18 +82,7 @@ const Home: NextPage = () => {
                         width={320}
                       />
                     </RevealFade>
-                    <ModalBox
-                      isOpen={modal}
-                      onRequestClose={handleToggleModal}
-                      modalClassName='active-modal'
-                      overlayClassName='react-modal-overlay'
-                    >
-                      <ImageSlider
-                        images={eventsPhotoUrls}
-                        imgHeight={500}
-                        imgWidth={800}
-                      />
-                    </ModalBox>
+
                   </ImageContainer>
                 ))
               ))}
@@ -100,7 +98,12 @@ const Home: NextPage = () => {
             <PortfolioWeddingsImagesContainer>
               {weddingPhotos.map(photo => (
                 photo.map(item => (
-                  <ImageContainer onClick={handleToggleModal} key={item}>
+                  <ImageContainer
+                    onClick={() => {
+                      handleToggleModal(),
+                        setCurrentImage(item)
+                    }}
+                    key={item}>
                     <RevealFade>
                       <NextImage
                         imgUrl={item}
@@ -108,18 +111,7 @@ const Home: NextPage = () => {
                         width={320}
                       />
                     </RevealFade>
-                    <ModalBox
-                      isOpen={modal}
-                      onRequestClose={handleToggleModal}
-                      modalClassName='active-modal'
-                      overlayClassName='react-modal-overlay'
-                    >
-                      <ImageSlider
-                        images={weddingsPhotoUrls}
-                        imgHeight={500}
-                        imgWidth={800}
-                      />
-                    </ModalBox>
+
                   </ImageContainer>
                 ))
               ))}
@@ -135,7 +127,11 @@ const Home: NextPage = () => {
             <PortfolioBirthdaysImagesContainer>
               {birthdayPhotos.map(photo => (
                 photo.map(item => (
-                  <ImageContainer onClick={handleToggleModal} key={item}>
+                  <ImageContainer onClick={() => {
+                    handleToggleModal(),
+                      setCurrentImage(item)
+                  }}
+                    key={item}>
                     <RevealFade>
                       <NextImage
                         imgUrl={item}
@@ -143,24 +139,21 @@ const Home: NextPage = () => {
                         width={320}
                       />
                     </RevealFade>
-                    <ModalBox
-                      isOpen={modal}
-                      onRequestClose={handleToggleModal}
-                      modalClassName='active-modal'
-                      overlayClassName='react-modal-overlay'
-                    >
-                      <ImageSlider
-                        images={birthdaysPhotoUrls}
-                        imgHeight={500}
-                        imgWidth={800}
-                      />
-                    </ModalBox>
+
                   </ImageContainer>
                 ))
               ))}
             </PortfolioBirthdaysImagesContainer>
           </PortfolioBirthdaysContainer>
         </PortfolioSectionContainer>
+        <ModalBox
+          isOpen={modal}
+          onRequestClose={handleToggleModal}
+          modalClassName='modalImage'
+          overlayClassName='react-modal-overlay'
+        >
+          {renderImage(currentImage)}
+        </ModalBox>
       </PortfolioSection>
 
     </Container >

@@ -7,6 +7,7 @@ interface ModalBoxProps {
     children?: ReactNode;
     modalClassName?: string;
     overlayClassName?: string;
+    portalClassName?: string;
     showAnimation?: boolean
 }
 
@@ -16,6 +17,7 @@ export function ModalBox({
     children,
     modalClassName,
     overlayClassName,
+    portalClassName,
     showAnimation = true
 }: ModalBoxProps) {
 
@@ -25,9 +27,20 @@ export function ModalBox({
             onRequestClose={onRequestClose}
             className={modalClassName}
             overlayClassName={overlayClassName}
+            portalClassName={portalClassName}
             showAnimation={showAnimation}
+            style={{
+                overlay: {
+                    border: 'none',
+                    outline: 'none'
+                },
+                content: {
+                    border: 'none',
+                    outline: 'none'
+                }
+            }}
         >
-           {children}
+            {children}
         </Container>
     )
 }
