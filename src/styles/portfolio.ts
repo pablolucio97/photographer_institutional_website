@@ -11,7 +11,7 @@ export const PortfolioSection = styled.section`
   width: 100%;
   min-height: 80vh;
 
-  & .modal-image{
+  & .active-modal {
   width: 92%;
   height: 64%;
   background: transparent;
@@ -50,7 +50,7 @@ export const PortfolioSectionContainer = styled.div`
 background: -webkit-linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
 background: linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
 
-& .modal-image{
+& .active-modal {
   width: 92%;
   height: 64%;
   background: transparent;

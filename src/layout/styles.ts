@@ -39,7 +39,7 @@ export const Container = styled.div`
   }
 
   
-  .modal-image{
+  .active-modal {
   width: 92%;
   height: 64%;
   background: transparent;

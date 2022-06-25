@@ -42,23 +42,25 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     .active-modal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        height: 80%;;
-        background: ${(props) => props.theme.colors.black100};
-        border-radius: 4px;
-        margin: 25% auto;
-        h3{
-            font-size: 1.24rem;
-            color: ${(props) => props.theme.colors.black100}
-        }
-        @media(max-width: 720px){
-            width: 92%;
-            height: 30%;;
-        }
+      width: 92%;
+    height: 64%;
+    background: transparent;
+    margin: 25% auto;
+    outline: none;
+    @media(min-width: 1900px){
+    width: 40%;
+  }
+    @media(max-width: 1900px){
+    width: 60%;
+  }
+    @media(max-width: 1400px){
+    width: 60%;
+  }
+  @media(max-width: 720px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   }
 
   .video-modal{
@@ -140,25 +142,4 @@ export const GlobalStyle = createGlobalStyle`
     margin-right: 8px;
   }
 
-  .modal-image{
-    width: 92%;
-    height: 64%;
-    background: transparent;
-    margin: 25% auto;
-    outline: none;
-    @media(min-width: 1900px){
-    width: 40%;
-  }
-    @media(max-width: 1900px){
-    width: 60%;
-  }
-    @media(max-width: 1400px){
-    width: 60%;
-  }
-  @media(max-width: 720px){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 `;

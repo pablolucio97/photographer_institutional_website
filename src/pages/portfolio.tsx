@@ -154,7 +154,7 @@ const Home: NextPage = () => {
         <ModalBox
           isOpen={modal}
           onRequestClose={handleToggleModal}
-          modalClassName='modal-image'
+          modalClassName='active-modal '
           overlayClassName='react-modal-overlay'
         >
           {renderImage(currentImage)}
