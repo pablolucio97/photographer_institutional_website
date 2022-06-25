@@ -46,7 +46,7 @@ const Home: NextPage = () => {
 
   function renderImage(path: string) {
     //eslint-disable-next-line
-    return<InnerImageZoom src={path} height='auto' className='modal-image' />
+    return <img src={path} width='100%' height='auto' className='modal-image' />
   }
 
   return (
