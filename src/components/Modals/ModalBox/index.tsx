@@ -25,20 +25,10 @@ export function ModalBox({
         <Container
             isOpen={isOpen}
             onRequestClose={onRequestClose}
-            className='modal-image'
+            className={modalClassName}
             overlayClassName={overlayClassName}
             portalClassName={portalClassName}
             showAnimation={showAnimation}
-            style={{
-                overlay: {
-                    border: 'none',
-                    outline: 'none',
-                },
-                content: {
-                    border: 'none',
-                    outline: 'none'
-                }
-            }}
         >
             {children}
         </Container>

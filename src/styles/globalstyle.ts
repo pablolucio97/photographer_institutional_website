@@ -145,6 +145,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 64%;
     background: transparent;
     margin: 25% auto;
+    outline: none;
     @media(min-width: 1900px){
     width: 40%;
   }
