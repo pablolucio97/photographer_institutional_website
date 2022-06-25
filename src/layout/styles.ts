@@ -39,7 +39,7 @@ export const Container = styled.div`
   }
 
   
-  .modalImage{
+  .modal-image{
   width: 92%;
   height: 64%;
   background: transparent;

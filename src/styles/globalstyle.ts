@@ -140,7 +140,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-right: 8px;
   }
 
-  .modalImage{
+  .modal-image{
     width: 92%;
     height: 64%;
     background: transparent;

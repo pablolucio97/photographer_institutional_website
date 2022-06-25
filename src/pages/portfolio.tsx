@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
-import { useState } from 'react'
 import Head from 'next/head'
+import { useState } from 'react'
 import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
 import { FaBirthdayCake } from 'react-icons/fa'
 
@@ -34,8 +34,6 @@ const weddingPhotos = portfolioPhotos.map(photo => photo.weddings.map(wedding =>
 const birthdayPhotos = portfolioPhotos.map(photo => photo.birthdays.map(birthday => birthday.url))
 
 const Home: NextPage = () => {
-
-  console.log(eventPhotos)
 
   const [modal, setModal] = useState(false)
   const [currentImage, setCurrentImage] = useState('')
@@ -156,7 +154,7 @@ const Home: NextPage = () => {
         <ModalBox
           isOpen={modal}
           onRequestClose={handleToggleModal}
-          modalClassName='modalImage'
+          modalClassName='modal-image'
           overlayClassName='react-modal-overlay'
         >
           {renderImage(currentImage)}

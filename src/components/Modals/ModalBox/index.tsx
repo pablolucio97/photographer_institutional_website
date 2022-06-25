@@ -32,7 +32,7 @@ export function ModalBox({
             style={{
                 overlay: {
                     border: 'none',
-                    outline: 'none'
+                    outline: 'none',
                 },
                 content: {
                     border: 'none',
