@@ -37,18 +37,6 @@ const birthdayPhotos = portfolioPhotos.map(photo => photo.birthdays.map(birthday
 
 const Home: NextPage = () => {
 
-  const [modal, setModal] = useState(false)
-  const [currentImage, setCurrentImage] = useState('')
-
-  function handleToggleModal() {
-    setModal(!modal)
-  }
-
-  function renderImage(path: string) {
-    //eslint-disable-next-line
-    return <img src={path} width='100%' height='auto' className='modal-image' />
-  }
-
   return (
     <Container>
       <Head>
@@ -76,11 +64,8 @@ const Home: NextPage = () => {
             <PortfolioEventsImagesContainer>
               {eventPhotos.map(photo => (
                 photo.map(item => (
-                  <ImageContainer key={item}
-                    onClick={() => {
-                      handleToggleModal(),
-                        setCurrentImage(item)
-                    }}
+                  <ImageContainer
+                    key={item}
                   >
                     <RevealFade>
                       <NextImage
@@ -89,7 +74,6 @@ const Home: NextPage = () => {
                         width={320}
                       />
                     </RevealFade>
-
                   </ImageContainer>
                 ))
               ))}
@@ -106,11 +90,8 @@ const Home: NextPage = () => {
               {weddingPhotos.map(photo => (
                 photo.map(item => (
                   <ImageContainer
-                    onClick={() => {
-                      handleToggleModal(),
-                        setCurrentImage(item)
-                    }}
-                    key={item}>
+                    key={item}
+                  >
                     <RevealFade>
                       <NextImage
                         imgUrl={item}
@@ -118,7 +99,6 @@ const Home: NextPage = () => {
                         width={320}
                       />
                     </RevealFade>
-
                   </ImageContainer>
                 ))
               ))}
@@ -134,11 +114,9 @@ const Home: NextPage = () => {
             <PortfolioBirthdaysImagesContainer>
               {birthdayPhotos.map(photo => (
                 photo.map(item => (
-                  <ImageContainer onClick={() => {
-                    handleToggleModal(),
-                      setCurrentImage(item)
-                  }}
-                    key={item}>
+                  <ImageContainer
+                    key={item}
+                  >
                     <RevealFade>
                       <NextImage
                         imgUrl={item}
@@ -146,21 +124,12 @@ const Home: NextPage = () => {
                         width={320}
                       />
                     </RevealFade>
-
                   </ImageContainer>
                 ))
               ))}
             </PortfolioBirthdaysImagesContainer>
           </PortfolioBirthdaysContainer>
         </PortfolioSectionContainer>
-        <ModalBox
-          isOpen={modal}
-          onRequestClose={handleToggleModal}
-          modalClassName='active-modal'
-          overlayClassName='react-modal-overlay'
-        >
-          {renderImage(currentImage)}
-        </ModalBox>
       </PortfolioSection>
 
     </Container >
