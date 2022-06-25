@@ -10,9 +10,7 @@ export const PortfolioSection = styled.section`
   display: flex;
   width: 100%;
   min-height: 80vh;
-  background-color: ${({ theme }) => theme.colors.white100};
 
-  
   & .modalImage{
   width: 92%;
   height: 64%;
@@ -49,7 +47,9 @@ export const PortfolioSectionContainer = styled.div`
     font-weight: 800;
   }
 
-  background-color: ${({ theme }) => theme.colors.white100};
+background: -webkit-linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
+background: linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
+
 `;
 
 export const PortfolioEventsContainer = styled.div`
@@ -65,7 +65,7 @@ export const PortfolioEventsContainer = styled.div`
     color: ${({ theme }) => theme.colors.black300};
   }
 
-`;
+  `;
 
 export const PortfolioWeddingsContainer = styled.div`
  display: flex;

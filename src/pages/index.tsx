@@ -30,7 +30,6 @@ import { allPhotos, testimonials } from '../data/data'
 
 const CountUp = dynamic(() => import('react-countup'), { ssr: false })
 
-
 const Home: NextPage = () => {
 
   return (

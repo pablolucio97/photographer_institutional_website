@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
-import Head from 'next/head'
 import { useState } from 'react'
+import Head from 'next/head'
 import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
 import { FaBirthdayCake } from 'react-icons/fa'
 
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Danilo Fotografias | Home</title>
+        <title>Danilo Fotografias | Portifólio</title>
         {/* @ts-ignore */}
         <meta charset="UTF-8" />
         <meta name="description" content="Landing pages de alta conversão e sites profissionais" />

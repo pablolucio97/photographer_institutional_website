@@ -31,7 +31,7 @@ const Home: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Danilo Fotografias | Home</title>
+        <title>Danilo Fotografias | Contato</title>
         {/* @ts-ignore */}
         <meta charset="UTF-8" />
         <meta name="description" content="Landing pages de alta conversão e sites profissionais" />
