@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
-import { NextImage } from '../components/Next/NextImage'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { NextImage } from '../components/Next/NextImage'
 
 import {
   BannerSection,
@@ -19,11 +20,11 @@ import {
 } from '../styles'
 
 import { RevealFade } from '../components/Animations/RevealFade'
-import { SubTitle } from '../components/Typography/SubTitle'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
-import { Title } from '../components/Typography/Title'
 import { ImageSlider } from '../components/Elements/ImageSlider'
+import { SubTitle } from '../components/Typography/SubTitle'
 import { Text } from '../components/Typography/Text'
+import { Title } from '../components/Typography/Title'
 
 import { allPhotos, testimonials } from '../data/data'
 
@@ -34,6 +35,15 @@ const Home: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>Danilo Fotografias | Home</title>
+        {/* @ts-ignore */}
+        <meta charset="UTF-8" />
+        <meta name="description" content="Landing pages de alta conversão e sites profissionais" />
+        <meta name="keywords" content="pablosilvadev pablo silva psd landing pages site institucional profissional " />
+        <meta name='author' content='Pablo Silva' />
+        <meta name="theme-color" content="#000000" />
+      </Head>
       <BannerSection id='home'>
         <ImageSlider
           images={allPhotos}
@@ -101,7 +111,7 @@ const Home: NextPage = () => {
                 prefix='+ de '
                 end={700}
                 className='countUp'
-                 duration={4}
+                duration={4}
               />
               <SubTitle
                 content='Albúns entregues'
@@ -116,7 +126,7 @@ const Home: NextPage = () => {
                 decimal='.'
                 decimals={3}
                 className='countUp'
-                 duration={6}
+                duration={6}
               />
               <SubTitle
                 content='Clientes satisfeitos'

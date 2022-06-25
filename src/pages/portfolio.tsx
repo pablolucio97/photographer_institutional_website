@@ -1,5 +1,6 @@
-import { useState } from 'react'
 import { NextPage } from 'next'
+import Head from 'next/head'
+import { useState } from 'react'
 import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
 import { FaBirthdayCake } from 'react-icons/fa'
 
@@ -13,21 +14,20 @@ import {
   PortfolioSection,
   PortfolioSectionContainer,
   PortfolioWeddingsContainer,
-  PortfolioWeddingsImagesContainer,
-
+  PortfolioWeddingsImagesContainer
 } from '../styles/portfolio'
 
 import {
   BannerSection,
-  BannerSectionContainer,
+  BannerSectionContainer
 } from '../styles'
 
-import { NextImage } from '../components/Next/NextImage'
 import { RevealFade } from '../components/Animations/RevealFade'
-import { SubTitle } from '../components/Typography/SubTitle'
 import { ModalBox } from '../components/Modals/ModalBox'
+import { NextImage } from '../components/Next/NextImage'
+import { SubTitle } from '../components/Typography/SubTitle'
 
-import {  portfolioPhotos } from '../data/data'
+import { portfolioPhotos } from '../data/data'
 
 const eventPhotos = portfolioPhotos.map(photo => photo.events.map(event => event.url))
 const weddingPhotos = portfolioPhotos.map(photo => photo.weddings.map(wedding => wedding.url))
@@ -51,6 +51,15 @@ const Home: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>Danilo Fotografias | Home</title>
+        {/* @ts-ignore */}
+        <meta charset="UTF-8" />
+        <meta name="description" content="Landing pages de alta conversão e sites profissionais" />
+        <meta name="keywords" content="pablosilvadev pablo silva psd landing pages site institucional profissional " />
+        <meta name='author' content='Pablo Silva' />
+        <meta name="theme-color" content="#000000" />
+      </Head>
       <BannerSection id='home'>
         <BannerSectionContainer>
         </BannerSectionContainer>

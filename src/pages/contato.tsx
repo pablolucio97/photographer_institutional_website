@@ -1,11 +1,13 @@
 import { NextPage } from 'next'
+import Head from 'next/head'
 import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
+import { SubTitle } from '../components/Typography/SubTitle'
+import { Container } from '../layout/styles'
 import {
   BannerSection,
-  BannerSectionContainer,
+  BannerSectionContainer
 } from '../styles'
-import { SubTitle } from '../components/Typography/SubTitle'
 import {
   ContactSection,
   ContactSectionAddressContainer,
@@ -17,11 +19,10 @@ import {
   MapContainer,
   SocialItemContainer
 } from '../styles/contato'
-import { Container } from '../layout/styles'
 
 import { GoogleMap } from '../components/Elements/GoogleMap'
-import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
+import { Title } from '../components/Typography/Title'
 
 import { googleMapAddress } from '../data/data'
 
@@ -29,6 +30,15 @@ const Home: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>Danilo Fotografias | Home</title>
+        {/* @ts-ignore */}
+        <meta charset="UTF-8" />
+        <meta name="description" content="Landing pages de alta conversão e sites profissionais" />
+        <meta name="keywords" content="pablosilvadev pablo silva psd landing pages site institucional profissional " />
+        <meta name='author' content='Pablo Silva' />
+        <meta name="theme-color" content="#000000" />
+      </Head>
       <BannerSection id='home'>
         <BannerSectionContainer>
         </BannerSectionContainer>
