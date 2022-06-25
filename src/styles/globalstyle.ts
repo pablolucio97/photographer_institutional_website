@@ -62,6 +62,31 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
   }
   }
+    .modal-image{
+      width: 92vw;
+    height: 64vh;
+    background: transparent;
+    margin: 0 auto;
+    outline: none;
+    @media(min-width: 1900px){
+    width: 40vw;
+    height: 56vh;
+  }
+    @media(max-width: 1900px){
+    width: 60vw;
+    height: 48vh;
+  }
+    @media(max-width: 1400px){
+    width: 60vw;
+    height: 40vh;
+  }
+  @media(max-width: 720px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  }
 
   .video-modal{
       background: transparent;
@@ -141,5 +166,6 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.primary_dark};
     margin-right: 8px;
   }
+
 
 `;

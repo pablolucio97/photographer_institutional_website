@@ -29,6 +29,16 @@ export function ModalBox({
             overlayClassName={overlayClassName}
             portalClassName={portalClassName}
             showAnimation={showAnimation}
+            style={{
+                overlay: {
+                    border: 'none',
+                    outline: 'none',
+                },
+                content: {
+                    border: 'none',
+                    outline: 'none',
+                }
+            }}
         >
             {children}
         </Container>
