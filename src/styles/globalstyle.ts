@@ -41,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
       font-family: ${(props) => props.theme.fonts.secondary};
     }
     
-    .active-modal {
+    .active-modal{
       width: 92%;
     height: 64%;
     background: transparent;
