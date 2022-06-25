@@ -25,7 +25,7 @@ export function ModalBox({
         <Container
             isOpen={isOpen}
             onRequestClose={onRequestClose}
-            className={modalClassName}
+            className='modal-image'
             overlayClassName={overlayClassName}
             portalClassName={portalClassName}
             showAnimation={showAnimation}

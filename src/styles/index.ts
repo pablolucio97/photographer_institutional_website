@@ -20,27 +20,6 @@ export const Container = styled.div`
   }
   }
 
-  &   .modal-image{
-    width: 92%;
-    height: 64%;
-    background: transparent;
-    margin: 25% auto;
-    @media(min-width: 1900px){
-    width: 40%;
-  }
-    @media(max-width: 1900px){
-    width: 60%;
-  }
-    @media(max-width: 1400px){
-    width: 60%;
-  }
-  @media(max-width: 720px){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 `;
 
 export const BannerSection = styled.section`
