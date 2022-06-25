@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
 import { FaBirthdayCake } from 'react-icons/fa'
+import InnerImageZoom from 'react-inner-image-zoom'
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css'
 
 import {
   Container,
@@ -44,7 +46,7 @@ const Home: NextPage = () => {
 
   function renderImage(path: string) {
     //eslint-disable-next-line
-    return <img src={path} width='100%' height='auto' className='modal-image' />
+    return<InnerImageZoom src={path} height='auto' className='modal-image' />
   }
 
   return (

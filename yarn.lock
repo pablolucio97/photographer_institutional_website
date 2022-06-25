@@ -2841,6 +2841,11 @@ react-icons@^4.4.0:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
   integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
 
+react-inner-image-zoom@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-inner-image-zoom/-/react-inner-image-zoom-3.0.1.tgz#d9a28f1630ba7628584548257638a9f9c7c1adc2"
+  integrity sha512-P1342vjA2SKjUbTpCwSGxmciSPZoK5U++CterJHisqYiBjT9KQlbHz3M9Om5Y+EpLo1N9cXOgt7d9EalHnlGcQ==
+
 react-intersection-observer@^8.26.2:
   version "8.34.0"
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.34.0.tgz#6f6e67831c52e6233f6b6cc7eb55814820137c42"
