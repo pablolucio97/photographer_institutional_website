@@ -50,6 +50,27 @@ export const PortfolioSectionContainer = styled.div`
 background: -webkit-linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
 background: linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
 
+& .modalImage{
+  width: 92%;
+  height: 64%;
+  background: transparent;
+  margin: 25% auto;
+  @media(min-width: 1900px){
+  width: 40%;
+}
+  @media(max-width: 1900px){
+  width: 60%;
+}
+  @media(max-width: 1400px){
+  width: 60%;
+}
+@media(max-width: 720px){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
 `;
 
 export const PortfolioEventsContainer = styled.div`
@@ -133,4 +154,6 @@ export const ImageContainer = styled.div`
     cursor: pointer;
     margin: 16px;
 `
+
+
 
