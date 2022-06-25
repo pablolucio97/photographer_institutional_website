@@ -94,28 +94,6 @@ export const GlobalStyle = createGlobalStyle`
         
   }
 
-  .headerScrolling {
-    position: fixed;
-    height: 64px;
-    background-color: ${({ theme }) => theme.colors.black100};
-    z-index: 999;
-  }
-
-  .headerNotScrolling {
-    background-color: transparent;
-  }
-
-  .animatedTopScroll {
-    right: 24px;
-    transition: all 0.3s ease;
-    background: ${(props) => props.theme.colors.primary_dark};
-    color: ${(props) => props.theme.colors.black300};
-  }
-  .normalTopScroll {
-    right: -80px;
-    transition: all 0.3s ease;
-  }
-
   .countUp{
     font-size: ${({ theme }) => theme.sizes.xxhuge};
     font-weight: 800;

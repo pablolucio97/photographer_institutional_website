@@ -4,6 +4,28 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  & .modalImage{
+  width: 92%;
+  height: 64%;
+  background: transparent;
+  margin: 25% auto;
+  @media(min-width: 1900px){
+  width: 40%;
+}
+  @media(max-width: 1900px){
+  width: 60%;
+}
+  @media(max-width: 1400px){
+  width: 60%;
+}
+@media(max-width: 720px){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
 `;
 
 export const PortfolioSection = styled.section`
@@ -110,3 +132,4 @@ export const ImageContainer = styled.div`
     cursor: pointer;
     margin: 16px;
 `
+

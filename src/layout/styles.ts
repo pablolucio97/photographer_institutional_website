@@ -17,7 +17,9 @@ export const Container = styled.div`
   .headerScrolling {
     position: fixed;
     height: 64px;
-    background-color: ${({ theme }) => theme.colors.black100};
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    background-color: rgba(17, 25, 40, 0.54);
     z-index: 999;
   }
 

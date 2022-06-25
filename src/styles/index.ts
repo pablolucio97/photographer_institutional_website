@@ -5,6 +5,21 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.black100};
+
+  & .testimonialCard{
+    width: 320px;
+    height: 400px;
+    margin: 8px;
+    @media (max-width: 1080px) {
+    width: 56%;
+    margin: 12px auto;
+  }
+    @media (max-width: 720px) {
+    width: 88%;
+    margin: 12px auto;
+  }
+  }
+
 `;
 
 export const BannerSection = styled.section`
