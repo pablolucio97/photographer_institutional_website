@@ -48,6 +48,7 @@ const Home: NextPage = () => {
   }
 
   function renderImage(path: string) {
+    //eslint-disable-next-line
     return <img src={path} width='100%' height='auto' />
   }
 
