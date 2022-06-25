@@ -94,11 +94,6 @@ export const GlobalStyle = createGlobalStyle`
         
   }
 
-  .collapsible-info-parent{
-    width: 100%;
-    cursor: pointer;
-  }
-
   .headerScrolling {
     position: fixed;
     height: 64px;
@@ -144,11 +139,14 @@ export const GlobalStyle = createGlobalStyle`
   .testimonialCard{
     width: 320px;
     height: 400px;
+    margin: 8px;
     @media (max-width: 1080px) {
     width: 56%;
+    margin: 12px auto;
   }
     @media (max-width: 720px) {
     width: 88%;
+    margin: 12px auto;
   }
   }
 

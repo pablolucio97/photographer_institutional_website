@@ -1,13 +1,10 @@
-
-import { Title } from '../components/Typography/Title'
-import { Text } from '../components/Typography/Text'
+import { NextPage } from 'next'
+import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 import {
   BannerSection,
   BannerSectionContainer,
 } from '../styles'
-import { googleMapAddress } from '../data/data'
-import { NextPage } from 'next'
 import { SubTitle } from '../components/Typography/SubTitle'
 import {
   ContactSection,
@@ -20,9 +17,13 @@ import {
   MapContainer,
   SocialItemContainer
 } from '../styles/contato'
-import { GoogleMap } from '../components/Elements/GoogleMap'
-import { FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { Container } from '../layout/styles'
+
+import { GoogleMap } from '../components/Elements/GoogleMap'
+import { Title } from '../components/Typography/Title'
+import { Text } from '../components/Typography/Text'
+
+import { googleMapAddress } from '../data/data'
 
 const Home: NextPage = () => {
 

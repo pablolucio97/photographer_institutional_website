@@ -1,16 +1,31 @@
 import type { NextPage } from 'next'
+import { NextImage } from '../components/Next/NextImage'
 import dynamic from 'next/dynamic'
 
-import { Title } from '../components/Typography/Title'
-import { Text } from '../components/Typography/Text'
-import { BannerSection, BannerSectionContainer, Container, CountUpContainer, CountUpGroupContainer, IntroductionSection, IntroductionSectionContainer, IntroductionSectionContentContainer, IntroductionSectionImageContainer, MetricsSection, MetricsSectionContainer, TestimonialsCardsContainer, TestimonialsSection, TestimonialsSectionContainer } from '../styles'
-import { NextImage } from '../components/Next/NextImage'
+import {
+  BannerSection,
+  Container,
+  CountUpContainer,
+  CountUpGroupContainer,
+  IntroductionSection,
+  IntroductionSectionContainer,
+  IntroductionSectionContentContainer,
+  IntroductionSectionImageContainer,
+  MetricsSection,
+  MetricsSectionContainer,
+  TestimonialsCardsContainer,
+  TestimonialsSection,
+  TestimonialsSectionContainer
+} from '../styles'
+
 import { RevealFade } from '../components/Animations/RevealFade'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
-import { allPhotos, birthdaysPhotoUrls, testimonials } from '../data/data'
+import { Title } from '../components/Typography/Title'
 import { ImageSlider } from '../components/Elements/ImageSlider'
+import { Text } from '../components/Typography/Text'
 
+import { allPhotos, testimonials } from '../data/data'
 
 const CountUp = dynamic(() => import('react-countup'), { ssr: false })
 

@@ -1,8 +1,9 @@
+import { useState } from 'react'
+import { NextPage } from 'next'
+import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
+import { FaBirthdayCake } from 'react-icons/fa'
 
-import { Title } from '../components/Typography/Title'
-import Image from 'next/image'
 import {
-
   Container,
   ImageContainer,
   PortfolioBirthdaysContainer,
@@ -20,17 +21,13 @@ import {
   BannerSection,
   BannerSectionContainer,
 } from '../styles'
-import { birthdaysPhotoUrls, eventsPhotoUrls, portfolioPhotos, weddingsPhotoUrls } from '../data/data'
+
 import { NextImage } from '../components/Next/NextImage'
-import { NextPage } from 'next'
-import { FaBirthdayCake } from 'react-icons/fa'
-import { BsCalendar2Event, BsFlower1 } from 'react-icons/bs'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { SubTitle } from '../components/Typography/SubTitle'
 import { ModalBox } from '../components/Modals/ModalBox'
-import { useEffect, useState } from 'react'
-import { ImageSlider } from '../components/Elements/ImageSlider'
 
+import {  portfolioPhotos } from '../data/data'
 
 const eventPhotos = portfolioPhotos.map(photo => photo.events.map(event => event.url))
 const weddingPhotos = portfolioPhotos.map(photo => photo.weddings.map(wedding => wedding.url))
