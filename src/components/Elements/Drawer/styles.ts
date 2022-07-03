@@ -6,7 +6,7 @@ interface DrawerProps {
 
 const menuAnimationVertical = keyframes`
     0%{height: 0px};
-    100%{height: 24vh};
+    100%{height: 32vh};
 `;
 
 const menuAnimationHorizontal = keyframes`
@@ -33,7 +33,7 @@ export const Container = styled.div<DrawerProps>`
       direction === "top" ? menuAnimationVertical : menuAnimationHorizontal}
     0.32s;
   -webkit-animation-fill-mode: forwards;
-  background-color: ${({ theme }) => theme.colors.element_base};
+  background-color: ${({ theme }) => theme.colors.black100};
   overflow: auto;
 `;
 

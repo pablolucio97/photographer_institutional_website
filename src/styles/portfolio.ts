@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  background:  ${({ theme }) => theme.colors.white100};
 `;
 
 export const PortfolioSection = styled.section`
@@ -15,7 +16,7 @@ export const PortfolioSection = styled.section`
   width: 92%;
   height: 64%;
   background: transparent;
-  margin: 25% auto;
+  margin: 0 auto;
   @media(min-width: 1900px){
   width: 40%;
 }
@@ -40,15 +41,12 @@ export const PortfolioSectionContainer = styled.div`
   align-items: center;
   width: 1900px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 40px;
 
   & h1 {
     color: ${({ theme }) => theme.colors.black100};
     font-weight: 800;
   }
-
-background: -webkit-linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
-background: linear-gradient(-131deg, rgb(255, 255, 255), rgb(224, 222, 220));
 
 & .active-modal {
   width: 92%;
@@ -79,7 +77,7 @@ export const PortfolioEventsContainer = styled.div`
   align-items: center;
   width: 100%;
   min-height: 40vh;
-  margin: 40px auto 0;
+  margin: 0 auto;
 
   & h3{
     margin: 0 auto;

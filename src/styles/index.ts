@@ -100,18 +100,22 @@ export const MetricsSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 1900px;
   margin: 0 auto;
   padding: 80px 40px;
-
   & h1 {
     color: ${({ theme }) => theme.colors.white100};
     font-weight: 800;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    @media (max-width: 1080px) {
+      margin-bottom: 0;
+    }
   }
-
   @media (max-width: 1080px) {
     flex-direction: column;
+    justify-content: space-evenly;
   }
 `;
 
@@ -122,6 +126,7 @@ export const CountUpGroupContainer = styled.div`
   padding: 12px;
   @media (max-width: 720px) {
     flex-direction: column;
+    padding: 0;
   }
 `;
 export const CountUpContainer = styled.div`
@@ -133,15 +138,15 @@ export const CountUpContainer = styled.div`
   height: 320px;
   margin: 0 auto;
   padding: 12px;
-
   & h3 {
     color: ${({ theme }) => theme.colors.white100};
     font-weight: 500;
-    margin: 24px auto;
+    margin: 0 auto;
     text-align: center;
   }
   @media (max-width: 720px) {
-    height: 240px;
+    width: 100%;
+    height: 120px;
   }
 `;
 
@@ -163,6 +168,7 @@ export const TestimonialsSectionContainer = styled.div`
   & h1 {
     color: ${({ theme }) => theme.colors.black100};
     font-weight: 800;
+    text-align: center;
   }
 
   @media (max-width: 1080px) {

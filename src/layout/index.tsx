@@ -112,6 +112,12 @@ export default function Layout({ children }: LayoutProps) {
                 <DrawerButton
                     toggleDrawer={handleToggleDrawer}
                 />
+                <HeaderLogoContainer>
+                    <Logo 
+                        imageUrl='/logo.svg'
+                        size={headerAnimation ? 'small' : 'medium'}
+                    />
+                </HeaderLogoContainer>
 
                 <HeaderLinksContainer>
                     <HeaderLink
