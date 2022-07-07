@@ -26,43 +26,43 @@ export const portfolioPhotos = [
   {
     events: [
       {
-        url: "/images/event1.jpg",
+        url: "/images/event1.png",
         name: "event1",
       },
       {
-        url: "/images/event2.jpg",
+        url: "/images/event2.png",
         name: "event2",
       },
       {
-        url: "/images/event3.jpg",
+        url: "/images/event3.png",
         name: "event3",
       },
     ],
     weddings: [
       {
-        url: "/images/wedding1.jpg",
+        url: "/images/wedding1.png",
         name: "wedding1",
       },
       {
-        url: "/images/wedding2.jpg",
+        url: "/images/wedding2.png",
         name: "wedding2",
       },
       {
-        url: "/images/wedding3.jpg",
+        url: "/images/wedding3.png",
         name: "wedding3",
       },
     ],
     birthdays: [
       {
-        url: "/images/birthday1.jpg",
+        url: "/images/birthday1.png",
         name: "birthday1",
       },
       {
-        url: "/images/birthday2.jpg",
+        url: "/images/birthday2.png",
         name: "birthday2",
       },
       {
-        url: "/images/birthday3.jpg",
+        url: "/images/birthday3.png",
         name: "birthday3",
       },
     ],
@@ -73,21 +73,21 @@ export const googleMapAddress =
   "https://maps.google.com/maps?q=joao%20monlevade&t=&z=13&ie=UTF8&iwloc=&output=embed";
 
 export const eventsPhotoUrls = [
-  "/images/event1.jpg",
-  "/images/event2.jpg",
-  "/images/event3.jpg",
+  "/images/event1.png",
+  "/images/event2.png",
+  "/images/event3.png",
 ];
 
 export const weddingsPhotoUrls = [
-  "/images/wedding1.jpg",
-  "/images/wedding2.jpg",
-  "/images/wedding3.jpg",
+  "/images/wedding1.png",
+  "/images/wedding2.png",
+  "/images/wedding3.png",
 ];
 
 export const birthdaysPhotoUrls = [
-  "/images/birthday1.jpg",
-  "/images/birthday2.jpg",
-  "/images/birthday3.jpg",
+  "/images/birthday1.png",
+  "/images/birthday2.png",
+  "/images/birthday3.png",
 ];
 
 export const allPhotos = [...eventsPhotoUrls, ...birthdaysPhotoUrls, ...weddingsPhotoUrls]

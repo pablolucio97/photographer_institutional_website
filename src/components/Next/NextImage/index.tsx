@@ -8,11 +8,13 @@ interface NextImageProps {
     height: number;
     style?: CSSProperties;
     className?: string;
+    onClick?: () => void;
 }
 
 export function NextImage({
     imgUrl,
     width,
+    onClick,
     height,
     style,
     className
@@ -26,6 +28,7 @@ export function NextImage({
                 height={height}
                 style={style}
                 className={className}
+                onClick={onClick}
             />
         </Container>
     )

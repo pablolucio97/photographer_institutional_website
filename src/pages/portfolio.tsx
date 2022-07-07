@@ -35,7 +35,21 @@ const eventPhotos = portfolioPhotos.map(photo => photo.events.map(event => event
 const weddingPhotos = portfolioPhotos.map(photo => photo.weddings.map(wedding => wedding.url))
 const birthdayPhotos = portfolioPhotos.map(photo => photo.birthdays.map(birthday => birthday.url))
 
+console.log(eventPhotos[0][0])
+
+
 const Home: NextPage = () => {
+
+  const [modalImage, setModalImage] = useState(false)
+  const [currentImageView, setCurrentImageView] = useState('')
+
+  function handleModalImage() {
+    setModalImage(!modalImage)
+  }
+
+  function updateCurrentImageView(img: string) {
+    setCurrentImageView(img)
+  }
 
   return (
     <Container>
@@ -72,6 +86,10 @@ const Home: NextPage = () => {
                         imgUrl={item}
                         height={240}
                         width={320}
+                        onClick={() => {
+                          handleModalImage(),
+                            updateCurrentImageView(item)
+                        }}
                       />
                     </RevealFade>
                   </ImageContainer>
@@ -97,6 +115,10 @@ const Home: NextPage = () => {
                         imgUrl={item}
                         height={240}
                         width={320}
+                        onClick={() => {
+                          handleModalImage(),
+                            updateCurrentImageView(item)
+                        }}
                       />
                     </RevealFade>
                   </ImageContainer>
@@ -122,6 +144,10 @@ const Home: NextPage = () => {
                         imgUrl={item}
                         height={240}
                         width={320}
+                        onClick={() => {
+                          handleModalImage(),
+                            updateCurrentImageView(item)
+                        }}
                       />
                     </RevealFade>
                   </ImageContainer>
@@ -131,6 +157,19 @@ const Home: NextPage = () => {
           </PortfolioBirthdaysContainer>
         </PortfolioSectionContainer>
       </PortfolioSection>
+      <ModalBox
+        isOpen={modalImage}
+        onRequestClose={handleModalImage}
+        modalClassName='modal-image'
+        overlayClassName='react-modal-overlay'
+      >
+        <NextImage
+          imgUrl={currentImageView}
+          width={1600}
+          height={920}
+        />
+
+      </ModalBox>
 
     </Container >
   )

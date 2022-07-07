@@ -46,8 +46,8 @@ const Home: NextPage = () => {
       <BannerSection id='home'>
         <ImageSlider
           images={allPhotos}
-          imgWidth={1920}
-          imgHeight={940}
+          imgWidth={1900}
+          imgHeight={900}
           infiniteLoop
           autoPlay
           showStatus={false}
