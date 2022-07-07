@@ -33,6 +33,16 @@ export const PortfolioSection = styled.section`
 }
 }
 
+& .modal-image{
+  width: 100vw;
+  background: transparent;
+  margin: auto;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
 `;
 
 export const PortfolioSectionContainer = styled.div`

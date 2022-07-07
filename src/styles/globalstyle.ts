@@ -151,5 +151,10 @@ export const GlobalStyle = createGlobalStyle`
     margin-right: 8px;
   }
 
+  .whatsappButton{
+    background-color: #25d366;
+    color: ${({ theme }) => theme.colors.white100};
+  }
+
 
 `;

@@ -21,6 +21,7 @@ import { SocialIcons } from '../components/Elements/SocialIcons';
 import { TopScrollButton } from '../components/Elements/TopScrollButton';
 import NextProgress from '../components/Next/NextProgress';
 import { Text } from '../components/Typography/Text';
+import { WhatsappButton } from '../components/WhatsappButton';
 import { Container } from './styles';
 
 interface LayoutProps {
@@ -79,6 +80,11 @@ export default function Layout({ children }: LayoutProps) {
                 icon={<MdArrowUpward />}
                 elementReferenceId='top'
             />
+            <WhatsappButton
+                ariaLabel='Voltar para o topo'
+                className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
+                whatsappContact='31985187963'
+            />
             <Header
                 className={headerAnimation ? 'headerScrolling glassEffect' : 'headerNotScrolling'}
             >
@@ -113,7 +119,7 @@ export default function Layout({ children }: LayoutProps) {
                     toggleDrawer={handleToggleDrawer}
                 />
                 <HeaderLogoContainer>
-                    <Logo 
+                    <Logo
                         imageUrl='/logo.svg'
                         size={headerAnimation ? 'small' : 'medium'}
                     />

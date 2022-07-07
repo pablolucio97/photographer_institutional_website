@@ -11,6 +11,7 @@ import {
 import {
   ContactSection,
   ContactSectionAddressContainer,
+  ContactSectionContactContainer,
   ContactSectionContactInfoContainer,
   ContactSectionContainer,
   ContactSectionContentContainer,
@@ -25,8 +26,15 @@ import { Text } from '../components/Typography/Text'
 import { Title } from '../components/Typography/Title'
 
 import { googleMapAddress } from '../data/data'
+import { PrimaryButton } from '../components/Elements/PrimaryButton'
+import { MdCall } from 'react-icons/md'
 
-const Home: NextPage = () => {
+const Contato: NextPage = () => {
+
+
+  function startChat(whatsappContact: string) {
+    window.open(`http://api.whatsapp.com/send?phone=55${whatsappContact}`)
+  }
 
   return (
     <Container>
@@ -92,6 +100,25 @@ const Home: NextPage = () => {
                   content='Rua João Ozório, número 123, João Monlevade - MG.'
                 />
               </ContactSectionAddressContainer>
+              <ContactSectionContactContainer>
+                <SubTitle
+                  content='Whatsapp'
+                />
+                <PrimaryButton
+                  title='Iniciar conversa'
+                  onClick={() => startChat('31985187963')}
+                  className='whatsappButton'
+                  size='large'
+                  icon={
+                    <MdCall
+                      size={16}
+                      style={{
+                        marginRight: 4
+                      }}
+                    />
+                  }
+                />
+              </ContactSectionContactContainer>
             </ContactSectionContactInfoContainer>
           </ContactSectionContentContainer>
         </ContactSectionContainer>
@@ -100,4 +127,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Contato
