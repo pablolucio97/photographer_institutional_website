@@ -16,13 +16,10 @@ const modalAnimation = keyframes`
   `;
 
 export const Container = styled(Modal)<ModalBoxProps>`
-  width: 400px;
-  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.white100};
-  border-radius: 4px;
+  background-color: transparent;
   padding: 16px;
   border: 0;
   animation: ${({ showAnimation }) => showAnimation && modalAnimation} 1s ease;

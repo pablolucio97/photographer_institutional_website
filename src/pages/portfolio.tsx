@@ -38,7 +38,7 @@ const birthdayPhotos = portfolioPhotos.map(photo => photo.birthdays.map(birthday
 console.log(eventPhotos[0][0])
 
 
-const Home: NextPage = () => {
+const Portfolio: NextPage = () => {
 
   const [modalImage, setModalImage] = useState(false)
   const [currentImageView, setCurrentImageView] = useState('')
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         <meta name='author' content='Pablo Silva' />
         <meta name="theme-color" content="#000000" />
       </Head>
-      <BannerSection id='home'>
+      <BannerSection id='portfolio'>
         <BannerSectionContainer>
         </BannerSectionContainer>
       </BannerSection>
@@ -175,4 +175,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Portfolio
